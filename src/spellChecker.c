@@ -100,5 +100,6 @@ int main(int argc, char**argv)
     char *filterPtr = initFilter("../dictionary/words.txt", base, filterSize);
     int numErr = spellCheck("../articles/article.txt", filterPtr, base, filterSize);
     printf("\nNumber of errors detected: %d\n", numErr);
+    free(filterPtr);
     return 0;
 }
